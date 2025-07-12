@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Media Mind Creation: Crafting powerful stories through social media, events, YouTube management, photography, and more." />
+  <title>Media Mind Creation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Times+New+Roman&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Gotu', 'Times New Roman', serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://static.vecteezy.com/system/resources/thumbnails/011/545/805/small_2x/abstract-luxury-glowing-lines-curved-overlapping-on-dark-blue-background-template-premium-award-design-free-vector.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glow-border {
+      border: 2px solid rgba(0, 102, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 50px 20px;
+      overflow-y: auto;
+      z-index: 50;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      color: #333;
+    }
+    .modal-content img {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .close {
+      position: absolute;
+      top: 20px; right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white z-30 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 relative">
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752350018/media_mind_creation-removebg-preview_1_zkox1p.png"
+        alt="Main Logo" class="h-16 md:h-20" />
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+          alt="Center Logo" class="h-12 md:h-14" />
+      </div>
+      <nav class="hidden md:flex space-x-6 text-lg text-black">
+        <a href="#about" class="hover:text-blue-600">About Us</a>
+        <a href="#services" class="hover:text-blue-600">Our Services</a>
+        <a href="#projects" class="hover:text-blue-600">Our Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact Us</a>
+      </nav>
+      <button class="md:hidden text-black text-2xl" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden bg-white px-6 pb-4 space-y-2 text-black">
+      <a href="#about" class="block">About Us</a>
+      <a href="#services" class="block">Our Services</a>
+      <a href="#projects" class="block">Our Projects</a>
+      <a href="#contact" class="block">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">We create stories that world remembers</h1>
+      <p class="text-lg" data-aos="fade-up" data-aos-delay="100">Crafting your brand's story with impact, emotion, and creativity.</p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-20 bg-white bg-opacity-80 text-gray-900 text-center" data-aos="fade-right">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6 text-blue-900">About Us</h2>
+      <p class="text-lg leading-relaxed">India has a rich tradition of storytelling, and we believe that every brand has its own unique story to tell. At Media Mind Creation, our mission is to shape those stories and deliver them to the right audience in the most impactful way. In the ever-evolving world of media, we are the minds behind meaningful creations crafting content that not only informs but also connects, inspires, and leaves a lasting impression. We don't just create content – we create stories that world remembers.</p>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section id="services" class="py-20 bg-white bg-opacity-80 text-gray-900 text-center" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-14 text-blue-900">Our Services</h3>
+      <div class="flex flex-wrap justify-center gap-10">
+        <!-- Social Media -->
+        <div class="glass glow-border p-6 rounded-xl shadow-lg w-72" data-aos="zoom-in-up">
+          <img src="https://cdn.pixabay.com/photo/2015/10/21/08/22/media-998990_1280.jpg" alt="Social Media Management"
+            class="w-full h-40 object-cover rounded-md mb-4" />
+          <h4 class="text-lg font-semibold mb-2">Social Media Management</h4>
+          <p>We manage your online presence to increase visibility and engagement across social platforms.</p>
+        </div>
+        <!-- Event Management -->
+        <div class="glass glow-border p-6 rounded-xl shadow-lg w-72" data-aos="zoom-in-up">
+          <img src="https://content.jdmagicbox.com/comp/ernakulam/m4/0484px484.x484.140206113128.a9m4/catalogue/we-create-events-panampilly-nagar-ernakulam-event-management-companies-nsobpzm660.jpg"
+            alt="Event Management" class="w-full h-40 object-cover rounded-md mb-4" />
+          <h4 class="text-lg font-semibold mb-2">Event Management</h4>
+          <p>From concept to execution, we organize seamless events tailored to your goals.</p>
+        </div>
+        <!-- YouTube Management -->
+        <div class="glass glow-border p-6 rounded-xl shadow-lg w-72" data-aos="zoom-in-up">
+          <img src="https://techmantu.com/wp-content/uploads/2023/03/7.jpg" alt="YouTube Management"
+            class="w-full h-40 object-cover rounded-md mb-4" />
+          <h4 class="text-lg font-semibold mb-2">YouTube Management</h4>
+          <p>We help grow your channel with strategy, optimization, and content scheduling.</p>
+        </div>
+        <!-- Photography / Videography -->
+        <div class="glass glow-border p-6 rounded-xl shadow-lg w-72" data-aos="zoom-in-up">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2_Bizh2lmTwKqrGREoVb4jvq9rTJI249qw&s"
+            alt="Photography & Videography" class="w-full h-40 object-cover rounded-md mb-4" />
+          <h4 class="text-lg font-semibold mb-2">Photography & Videography</h4>
+          <p>Capture your moments and ideas through professional visuals and storytelling.</p>
+        </div>
+        <!-- Content Creation -->
+        <div class="glass glow-border p-6 rounded-xl shadow-lg w-72" data-aos="zoom-in-up">
+          <img src="https://www.growandconvert.com/wp-content/uploads/2022/01/seo-content-writing.png" alt="Content Creation"
+            class="w-full h-40 object-cover rounded-md mb-4" />
+          <h4 class="text-lg font-semibold mb-2">Content Creation</h4>
+          <p>Engaging content that resonates with your audience and elevates your brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Projects -->
+  <section id="projects" class="py-20 bg-white bg-opacity-80 text-gray-900 text-center" data-aos="fade-left">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-6 text-blue-900">Our Projects</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project cards container -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white bg-opacity-80 text-gray-900 text-center" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-6 text-blue-900">Contact Us</h3>
+      <p class="text-lg mb-2">Gmail: <a href="mailto:mediamindcreation@gmail.com" class="text-blue-700 underline">mediamindcreation@gmail.com</a></p>
+      <p class="text-lg mb-2">WhatsApp: <a href="https://wa.me/917977646030" class="text-blue-700 underline">+91 79776 46030</a></p>
+      <p class="text-lg">Address: D-78, Pankaj B, LBS Marg, Ghatkopar West, Mumbai</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center bg-white bg-opacity-20 backdrop-blur-md">
+    <p class="text-white text-sm">&copy; 2025 Media Mind Creation. All rights reserved.</p>
+  </footer>
+
+  <!-- Modals -->
+  <!-- Repeated for each project -->
+  <div id="modal1" class="modal">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <div class="modal-content">
+      <h2>Chitrapataka Film Festival</h2>
+      <p>The Cultural Department of Maharashtra and Film City Mumbai launched Chitrapataka, the first-ever official Marathi Film Festival of Maharashtra, held in Mumbai. Media Mind Creation was entrusted with complete media responsibility for the event including photography, videography, social media management, and overall digital coverage ensuring powerful visibility and professional documentation throughout the festival.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352666/WhatsApp_Image_2025-07-12_at_9.25.19_PM_1_ir4fhg.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352666/WhatsApp_Image_2025-07-12_at_9.25.19_PM_a5hvb5.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352666/WhatsApp_Image_2025-07-12_at_9.25.18_PM_2_q7qv9q.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352665/WhatsApp_Image_2025-07-12_at_9.25.19_PM_2_jvsz6h.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352666/WhatsApp_Image_2025-07-12_at_9.25.18_PM_1_ojazza.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352667/WhatsApp_Image_2025-07-12_at_9.25.18_PM_qbcbph.jpg" />
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <div class="modal-content">
+      <h2>Cannes Film Festival Market</h2>
+      <p>At the prestigious Cannes Film Festival Market, the Maharashtra Film, Stage and Cultural Development Corporation represented India through Film City Mumbai. Media Mind Creation was proud to design and conceptualize their promotional stall, showcasing the spirit and potential of Maharashtra’s film industry on a global stage.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352829/WhatsApp_Image_2025-07-12_at_9.25.12_PM_1_rp4ui1.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352828/WhatsApp_Image_2025-07-12_at_9.25.13_PM_axyrzg.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352828/WhatsApp_Image_2025-07-12_at_9.25.14_PM_cmttyv.jpg" />
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <div class="modal-content">
+      <h2>Film City Mumbai Digital Partner</h2>
+      <p>Media Mind Creation is the official social media partner for Film City Mumbai, where we run engaging digital campaigns like #FilmFact, Know Your Film City, daily updates, and more. Our content strategy focuses on highlighting Film City’s rich legacy, facilities, and behind-the-scenes stories to connect with cinema lovers and industry professionals alike.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352520/WhatsApp_Image_2025-07-12_at_9.39.00_PM_1_dsrifj.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352520/WhatsApp_Image_2025-07-12_at_9.39.00_PM_lv5ebj.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352520/WhatsApp_Image_2025-07-12_at_9.39.02_PM_kyiimg.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352520/WhatsApp_Image_2025-07-12_at_9.39.01_PM_1_wtbtsr.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352520/WhatsApp_Image_2025-07-12_at_9.39.01_PM_2_msawrp.jpg" />
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <div class="modal-content">
+      <h2>Speak For India</h2>
+      <p>For the past three years, Media Mind Creation has actively handled the PR outreach for the Speak for India competition in Mumbai. Our team personally visits over 150 colleges across the city to distribute brochures and connect with faculty, ensuring maximum awareness and participation. This consistent on-ground effort has helped build a strong presence for the event among students.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352887/WhatsApp_Image_2025-07-12_at_9.25.11_PM_mtspfp.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352886/WhatsApp_Image_2025-07-12_at_9.25.11_PM_1_h8qesj.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352887/WhatsApp_Image_2025-07-12_at_9.25.10_PM_1_b11xbz.jpg" />
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <div class="modal-content">
+      <h2>Annabhau Sathe Film Festival</h2>
+      <p>Media Mind Creation handled the official social media management for the 7th International Annabhau Sathe Film Festival held in Pune. From creating engaging content to ensuring timely updates and digital promotions, we played a key role in enhancing the festival’s online presence and connecting it with a wider audience.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752359475/WhatsApp_Image_2025-07-12_at_9.25.15_PM_szpfsm.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752359472/WhatsApp_Image_2025-07-12_at_9.25.15_PM_1_tduh8w.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752359471/WhatsApp_Image_2025-07-12_at_9.25.15_PM_2_vpd3gw.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752359470/WhatsApp_Image_2025-07-12_at_9.25.16_PM_armrpj.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752359477/WhatsApp_Image_2025-07-12_at_9.25.14_PM_1_j8nbtr.jpg" />
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <div class="modal-content">
+      <h2>Ringan Charcha</h2>
+      <p>To spark interest in reading among the younger generation, Pustakanaka group organized a book discussion event on Ringan—an annual publication based on Maharashtra's Sant tradition—at Ruia College. Media Mind Creation successfully managed the entire event, ensuring smooth coordination, student engagement, and impactful on-ground execution.</p>
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352739/WhatsApp_Image_2025-07-12_at_9.25.16_PM_2_fuiqq3.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352739/WhatsApp_Image_2025-07-12_at_9.25.16_PM_1_nsjh9f.jpg" />
+      <img src="https://res.cloudinary.com/docgojvvd/image/upload/v1752352739/WhatsApp_Image_2025-07-12_at_9.25.17_PM_mfdhsu.jpg" />
+    </div>
+  </div>
+
+  <script>
+    AOS.init();
+
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = (e) => {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+      }
+    };
+
+    // Dynamically inject project cards
+    (function () {
+      const projects = [
+        {
+          id: 'modal1',
+          thumb: 'https://res.cloudinary.com/docgojvvd/image/upload/v1752359388/CHITRAPATAKA_THUMB_ywt1zh.jpg',
+          title: 'Chitrapataka Film Festival'
+        },
+        {
+          id: 'modal2',
+          thumb: 'https://res.cloudinary.com/docgojvvd/image/upload/v1752354849/WhatsApp_Image_2025-07-13_at_2.43.46_AM_fytmdu.jpg',
+          title: 'Cannes Film Festival Market'
+        },
+        {
+          id: 'modal3',
+          thumb: 'https://www.filmcitymumbai.org/images/fc/filmcity-logo.png',
+          title: 'Film City Mumbai Digital Partner'
+        },
+        {
+          id: 'modal4',
+          thumb: 'https://speakforindia.com/assets/images/logo/logo.jpeg',
+          title: 'Speak For India'
+        },
+        {
+          id: 'modal5',
+          thumb: 'https://filmfreeway-production-storage-01-connector.filmfreeway.com/festivals/logos/000/045/027/large/logo.jpg?1719251341',
+          title: 'Annabhau Sathe Film Festival'
+        },
+        {
+          id: 'modal6',
+          thumb: 'https://res.cloudinary.com/docgojvvd/image/upload/v1752352739/WhatsApp_Image_2025-07-12_at_9.25.16_PM_2_fuiqq3.jpg',
+          title: 'Ringan Charcha'
+        }
+      ];
+
+      const container = document.querySelector('#projects .grid');
+      projects.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer';
+        card.setAttribute('onclick', `openModal('${p.id}')`);
+        card.innerHTML = `
+          <img src="${p.thumb}" class="w-full h-48 object-cover">
+          <div class="p-4 text-gray-900 font-semibold">${p.title}</div>
+        `;
+        container.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+
+</html>
+
+
